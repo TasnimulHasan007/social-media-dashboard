@@ -1,1 +1,122 @@
 @use '../utils' as *;
+
+.card-parent {
+  display: grid;
+  gap: rem(30);
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background-color: var(--dark-card);
+  color: var(--dark-text1);
+  text-align: center;
+  padding: rem(24);
+  border-top: rem(4) solid transparent;
+  border-radius: rem(5);
+  overflow: hidden;
+
+  &--facebook {
+    border-color: var(--facebook);
+  }
+  &--twitter {
+    border-color: var(--twitter);
+  }
+  &--instagram {
+    padding-top: rem(28);
+    border: 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: rem(3);
+      background-image: linear-gradient(
+        225deg,
+        var(--instagram-start) 0%,
+        var(--instagram-via) 50%,
+        var(--instagram-end) 100%
+      );
+    }
+  }
+  &--youtube {
+    border-color: var(--youtube);
+  }
+
+  &__platform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    height: rem(20);
+    margin-bottom: rem(28);
+  }
+
+  &__icon {
+    &--facebook {
+    }
+    &--twitter {
+    }
+    &--instagram {
+    }
+    &--youtube {
+    }
+  }
+
+  &__username {
+    font-size: rem(12);
+    font-weight: 700;
+  }
+
+  &__followers {
+    margin-bottom: rem(24);
+  }
+
+  &__count {
+    font-weight: 700;
+    font-size: rem(56);
+    letter-spacing: rem(-2);
+    color: var(--dark-text2);
+    margin-bottom: rem(4);
+  }
+
+  &__label {
+    font-size: rem(12);
+    font-weight: 400;
+    letter-spacing: rem(5);
+    text-transform: uppercase;
+    color: var(--dark-text1);
+  }
+
+  &__change {
+    font-size: rem(12);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(4);
+
+    &--up {
+      color: var(--limegreen);
+      svg {
+        fill: var(--limegreen);
+      }
+    }
+    &--down {
+      color: var(--brightred);
+      svg {
+        fill: var(--brightred);
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

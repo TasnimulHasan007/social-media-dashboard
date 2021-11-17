@@ -18,6 +18,105 @@
     <script defer src="./dist/main.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <header class="header container">
+      <div class="header__title">
+        <h1>Social Media Dashboard</h1>
+        <div class="header__subtitle">Total followers 23,004</div>
+      </div>
+      <fieldset
+        aria-label="theme toggle"
+        role="radiogroup"
+        class="header__toggle toggle"
+      >
+        <div class="toggle__wrapper">
+          <input type="radio" name="theme" id="dark" />
+          <input type="radio" name="theme" id="system" checked />
+          <input type="radio" name="theme" id="light" />
+          <span aria-hidden="true" class="toggle__background"></span>
+          <span aria-hidden="true" class="toggle__switcher"></span>
+        </div>
+        <label for="dark">Dark</label>
+        <label for="system">System</label>
+        <label for="light">Light</label>
+      </fieldset>
+    </header>
+    <main>
+      <section class="container card-parent">
+        <div class="card card--facebook">
+          <div class="card__platform">
+            <img
+              class="card__icon"
+              src="./images/icon-facebook.svg"
+              alt="Facebook"
+            />
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">1987</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+              <path fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+            </svg>
+            <div class="card__number">12 Today</div>
+          </div>
+        </div>
+        <div class="card card--twitter">
+          <div class="card__platform">
+            <div class="card__icon">
+              <img src="./images/icon-twitter.svg" alt="Twitter" />
+            </div>
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">1044</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+              <path fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+            </svg>
+            <div class="card__number">99 Today</div>
+          </div>
+        </div>
+        <div class="card card--instagram">
+          <div class="card__platform">
+            <div class="card__icon">
+              <img src="./images/icon-instagram.svg" alt="Instagram" />
+            </div>
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">11K</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+              <path fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+            </svg>
+            <div class="card__number">1099 Today</div>
+          </div>
+        </div>
+        <div class="card card--youtube">
+          <div class="card__platform">
+            <div class="card__icon">
+              <img src="./images/icon-youtube.svg" alt="Youtube" />
+            </div>
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">8239</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+              <path fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+            </svg>
+            <div class="card__number">144 Today</div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

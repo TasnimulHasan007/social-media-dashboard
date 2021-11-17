@@ -17,7 +17,7 @@
     height: rem(24);
 
     &:focus-visible ~ .toggle__switcher {
-      outline: rem(3) solid var(--dark-text2);
+      box-shadow: 0 0 0 rem(8) var(--toggle-shadow-dark);
     }
   }
 
